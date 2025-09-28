@@ -24,7 +24,7 @@ h1{
 }
 
 button {
-  background-color: #3d0909;
+  background-color: #b10808;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -35,8 +35,10 @@ button {
 
 .container :hover{
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 35px rgba(163, 8, 8, 0.2);
     border-color: #667eea;
+    color: rgb(106, 179, 11);
+    background-color: black;
 }
 
 
