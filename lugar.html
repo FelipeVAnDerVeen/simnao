@@ -25,10 +25,10 @@
                 const resposta = botao.textContent;
 
                 // Envia a resposta para o backend
-                fetch("salvar_resposta.php", {
-                    method: "POST",
+                fetch("teste_metodo.php", {
+                    method: "POST", // Mantenha POST
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ resposta })
+                    body: JSON.stringify({ resposta: "Teste" })
                 })
                     .then(res => res.text())
                     .then(data => {
