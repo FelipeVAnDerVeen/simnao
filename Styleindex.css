@@ -20,6 +20,11 @@
     height: 100%;
   }
 
+  h1{
+    text-align: center;
+    font-size: 60px;
+  }
+
   button {
     background-color: #0a1a33;
     color: white;
