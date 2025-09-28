@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Stylelugar.css">
+  <title>Onde Gostaria?</title>
+</head>
+<body>
+
+  <h1>Qual Lugar?</h1>
+  <div class="container">
+    <button class="opcao">PIZZARIA</button>
+    <button class="opcao">SUCHI</button>
+    <button class="opcao">SORVETE</button>
+  </div>
+
+  <script>
+    const botoes = document.querySelectorAll(".opcao");
+
+    botoes.forEach(botao => {
+      botao.addEventListener("click", () => {
+        const resposta = botao.textContent;
+
+        // Envia a resposta para o backend
+        fetch("salvar_resposta.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: "resposta=" + encodeURIComponent(resposta)
+        })
+        .then(res => res.text())
+        .then(data => {
+          alert("Resposta enviada: " + resposta + "\nServidor disse: " + data);
+        })
+        .catch(err => console.error("Erro:", err));
+      });
+    });
+  </script>
+
+</body>
+</html>

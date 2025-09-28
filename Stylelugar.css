@@ -1,0 +1,73 @@
+body{
+    background: url(Fotos/sushi.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.30);
+    background-blend-mode: lighten;
+}
+
+
+h1{
+    align-items: center;
+    font-size: 80px;
+    text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza no eixo horizontal */
+  align-items: center;     /* Centraliza no eixo vertical */
+  height: 100vh;           /* Faz a altura ocupar toda a tela */
+  gap: 10%;               /* Espaço entre os botões */
+}
+
+button {
+  background-color: #3d0909;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 3em;
+}
+
+.container :hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+}
+
+
+@media (max-width: 940px) {
+    .container, main {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-principal-produtos {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}

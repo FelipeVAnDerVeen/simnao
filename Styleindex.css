@@ -1,0 +1,86 @@
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d1e8f0;
+    background: url(Fotos/cachorro-cao-pensa.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.30);
+    background-blend-mode: lighten;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    background-color: #0a1a33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* importante para poder mover o botão */
+    font-size: 40px;
+  }
+
+  #btnSim {
+    left: 45%;
+    top: 40%;
+  }
+
+  #btnNao {
+    left: 55%;
+    top: 40%;
+  }
+
+
+  @media (max-width: 940px) {
+    .container, main {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    #btnSim {
+    left: 25%;
+    top: 40%;
+  }
+
+  #btnNao {
+    left: 55%;
+    top: 40%;
+  }
+
+}
+
+@media (max-width: 768px) {
+    .titulo-principal-produtos {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
